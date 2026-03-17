@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="SeleniumLabSuite" verbose="1">
+
+    <test name="Basics and Annotations Test">
+        <classes>
+            <class name="demo.Phase2_Phase3_WebElementsAndTestNGTest"/>
+            <class name="demo.Phase4_DataDrivenTest"/>
+        </classes>
+    </test>
+
+    <test name="E-Commerce End to End Test">
+        <!-- Executing only tests grouped as regression for the POM E-commerce case study -->
+        <groups>
+            <run>
+                <include name="regression" />
+            </run>
+        </groups>
+        <classes>
+            <class name="ecommerce.tests.ECommerceTest"/>
+        </classes>
+    </test>
+
+</suite>
